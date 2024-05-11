@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors(
     {
-        origin: ["https://eli-cohen-portfolio-api.vercel.app"],
+        origin: ["https://eli-cohen-portfolio-frontend.vercel.app/"],
         methods: ["POST", "GET"],
         credentials: true
     }
