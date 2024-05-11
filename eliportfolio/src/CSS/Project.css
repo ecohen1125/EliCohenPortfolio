@@ -1,0 +1,330 @@
+:root {
+  --mainblack: #061735;
+  --maingrey: #07264e;
+  --mainblue: #003a6d;
+  --mainred: #cc0001;
+  --secondred: #af0000;
+}
+
+body {
+  background-color: var(--mainblue);
+  color: white;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: max-content;
+}
+
+h1 {
+    margin: 0;
+}
+
+#subText {
+    margin-bottom: 5px;
+}
+
+#projectParent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.5em;
+  width: 60%;
+  border-radius: 10px;
+}
+
+#project {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+#project #textbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  cursor: pointer;
+}
+
+#project #name {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+#project #techStack {
+  font-weight: bold;
+  margin: 0;
+  color: var(--mainred);
+}
+
+#project #photo {
+  width: 25%;
+  height: 25%;
+  padding-right: 8%;
+}
+
+.bordergradient {
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right, var(--mainred), var(--maingrey));
+  padding: 3px;
+}
+
+#borderfix {
+  background-color: var(--mainblue);
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#fixborder2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2%;
+  flex-direction: column;
+}
+
+/* Image slideshow from https://www.w3schools.com/howto/howto_js_slideshow.asp as starter */
+
+* {
+  box-sizing: border-box;
+}
+
+.slideshow-container {
+  position: relative;
+  margin: 0;
+  width: 50%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border-width: 0;
+}
+
+.next {
+  right: -32px;
+}
+
+.prev {
+  left: -32px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#descriptionFlex {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#mainDescription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+  background-color: var(--mainblack);
+  width: 58%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  padding-bottom: 3em;
+}
+
+#projectLink {
+  text-decoration: none;
+  padding: 5px;
+  color: var(--mainred);
+}
+
+#projectLink:hover {
+  color: var(--secondred);
+  background-color: var(--maingrey);
+  padding: 5px;
+  border-radius: 15px;
+}
+
+#btnController {
+  /* absolute; */
+  position: absolute;
+  right: 5%;
+  top: 13%;
+  display: none;
+}
+
+#projectBtn {
+  position: absolute;
+  /* display: absolute; */
+  /* left: 0; */
+  right: 0;
+  top: 0;
+}
+
+/* add project button */
+#projtctBtn {
+  /* display: none; */
+
+  appearance: button;
+  background-color: var(--secondred);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+#projtctBtn:after {
+  background-clip: padding-box;
+  background-color: var(--mainred);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+#projtctBtn:main,
+#projtctBtn:focus {
+  user-select: auto;
+}
+
+#projtctBtn:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+#projtctBtn:disabled {
+  cursor: auto;
+}
+
+#projtctBtn:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+
+/* Add Project Menu */
+#bigAddProject {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  width: 100%;
+  z-index: 5;
+}
+
+#addProjectMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+  background-color: var(--mainblack);
+  width: 60%;
+  position: absolute;
+}
+
+#addProjectForm {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  width: 75%;
+}
+
+#projectNameDiv,
+#techStackDiv,
+#projectLinkDiv,
+#passwordDiv {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1em;
+  width: 100%;
+  padding: 0;
+}
+
+#labelText {
+  padding-right: 10px;
+}
+
+#projectDesc {
+  width: 100%;
+  height: 250px;
+}
+
+#imageUploadDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#images {
+  width: 222px;
+}

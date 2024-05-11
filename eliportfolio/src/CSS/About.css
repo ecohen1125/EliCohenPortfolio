@@ -1,0 +1,58 @@
+:root {
+  --mainblack: #061735;
+  --maingrey: #07264e;
+  --mainblue: #003a6d;
+  --mainred: #cc0001;
+  --secondred: #af0000;
+}
+
+body {
+  background-color: var(--mainblue);
+  color: white;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: max-content;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 3%;
+  padding-top: 3%;
+}
+
+#about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#center {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+#basics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mainpic {
+  height: 400px;
+  padding-right: 30px;
+}
+
+#school {
+  font-size: 30px;
+}
+
+#bodytext {
+  font-size: 20px;
+  line-height: 1.25;
+  padding-top: 3%;
+}

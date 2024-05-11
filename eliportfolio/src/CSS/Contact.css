@@ -1,0 +1,64 @@
+:root {
+    --mainblack: #061735;
+    --maingrey: #07264e;
+    --mainblue: #003a6d;
+    --mainred: #cc0001;
+    --secondred: #af0000;
+  }
+  
+  body {
+    background-color: var(--mainblue);
+    color: white;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    height: max-content;
+  }
+  
+  h1 {
+      color: var(--mainred);
+      margin: 1.0em;
+  }
+  
+  #main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #email,
+  #phone,
+  #linkedin,
+  #github {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--mainred);
+    font-size: 1.5em;
+    width: 30%;
+  }
+  
+  img {
+    width: 50px;
+    height: 50px;
+    padding: 0.5em;
+  }
+  
+  a {
+    color: var(--mainred);
+    text-decoration: none;
+  }
+  
+  .text {
+      padding: 10px;
+  }
+  
+  p {
+      margin: 0;
+  }
+  a:hover {
+      background-color: var(--mainblack);
+      border-radius: 10px;
+      cursor: pointer;
+  }
+  
