@@ -6,7 +6,6 @@ const ProjectModel = require("./models/Project");
 
 const app = express();
 app.use(express.json());
-<<<<<<< HEAD
 app.use(
   cors({
     origin: "http://localhost:5174",
@@ -14,15 +13,6 @@ app.use(
     credentials: true,
   })
 );
-=======
-app.use(cors(
-    {
-        origin: ["https://eli-cohen-portfolio-frontend.vercel.app/"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
-));
->>>>>>> 1f346cfbcf87660f2cb83d3d480b9e9ddf687f85
 // app.use(cors());
 
 mongoose.connect("mongodb+srv://ecohen1125:Portfolio@portfolio-backend.zc2geux.mongodb.net/");
