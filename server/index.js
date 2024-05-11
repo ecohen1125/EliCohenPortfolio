@@ -13,6 +13,7 @@ app.use(cors(
         credentials: true
     }
 ));
+// app.use(cors());
 
 mongoose.connect("mongodb+srv://ecohen1125:Portfolio@portfolio-backend.zc2geux.mongodb.net/");
 
