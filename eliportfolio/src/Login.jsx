@@ -11,6 +11,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios.defaults.withCredentials = true;
     axios
       .post("https://eli-cohen-portfolio-api.vercel.app/login", { email, password })
       .then((res) => {

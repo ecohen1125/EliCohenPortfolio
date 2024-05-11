@@ -10,6 +10,7 @@ import axios from "axios";
 function Projects() {
   const location = useLocation();
   var role = location.state.role;
+  axios.defaults.withCredentials = true;
 
   const [name, setName] = useState("");
   const [techStack, setTechStack] = useState();
