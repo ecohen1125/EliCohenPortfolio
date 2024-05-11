@@ -49,7 +49,7 @@ function Projects() {
 
   useEffect(() => {
     axios
-      .get("https://eli-cohen-portfolio-api.vercel.app/getProjects")
+      .get("http://localhost:3001/getProjects")
       .then((allProjects) => {
         setProjects(allProjects.data);
       })
@@ -61,7 +61,7 @@ function Projects() {
     var newTechStack = techStack.split(", ");
 
     axios
-      .post("https://eli-cohen-portfolio-api.vercel.app/projects", { name, newTechStack, description, link })
+      .post("http://localhost:3001/projects", { name, newTechStack, description, link })
       .then((res) => {
         {
           console.log(res);

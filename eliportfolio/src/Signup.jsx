@@ -14,7 +14,7 @@ function Signup() {
     e.preventDefault();
     axios.defaults.withCredentials = true;
     axios
-      .post("https://eli-cohen-portfolio-api.vercel.app/register", { name, email, password })
+      .post("http://localhost:3001/register", { name, email, password })
       .then((res) => {
         {
           console.log(res);
