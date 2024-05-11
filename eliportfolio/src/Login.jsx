@@ -12,7 +12,7 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/login", { email, password })
+      .post("https://eli-cohen-portfolio-api.vercel.app/login", { email, password })
       .then((res) => {
         {
           if (res.data != "Incorrect Password" && res.data != "User does not exist") {
