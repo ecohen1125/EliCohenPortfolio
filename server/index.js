@@ -53,7 +53,7 @@ app.post("/register", (req, res) => {
     .catch((err) => res.json(err));
 });
 
-app.get("/", (req, res) => {
+app.get("/login", (req, res) => {
     res.json("Hello");
 })
 
