@@ -8,7 +8,13 @@ import github from "./assets/Logos/GitHub.png";
 
 function Contact() {
   const location = useLocation();
-  var role = location.state.role;
+  var role;
+
+  try {
+    role = location.state.role;
+  } catch (err) {
+    role = "user";
+  }
 
   return (
     <div>

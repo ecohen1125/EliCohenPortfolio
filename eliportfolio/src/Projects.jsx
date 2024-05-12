@@ -9,7 +9,14 @@ import axios from "axios";
 
 function Projects() {
   const location = useLocation();
-  var role = location.state.role;
+  var role;
+
+  try {
+    role = location.state.role;
+  } catch (err) {
+    role = "user";
+  }
+  
   axios.defaults.withCredentials = true;
 
   const [name, setName] = useState("");

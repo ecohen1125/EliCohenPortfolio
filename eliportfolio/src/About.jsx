@@ -5,7 +5,13 @@ import { Link, useLocation } from "react-router-dom";
 
 function About() {
   const location = useLocation();
-  var role = location.state.role;
+  var role;
+
+  try {
+    role = location.state.role;
+  } catch (err) {
+    role = "user";
+  }
 
   return (
     <div>

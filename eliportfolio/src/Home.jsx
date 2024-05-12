@@ -7,7 +7,13 @@ function Home() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  var role = location.state.role;
+  var role;
+
+  try {
+    role = location.state.role;
+  } catch (err) {
+    role = "user";
+  }
 
   const goAbout = () => {
     navigate("../about", {state:{id:1, role:role}});
@@ -18,7 +24,7 @@ function Home() {
   };
 
   const goContact = () => {
-    navigate("../contact", {state:{id:1, role:role}});
+    navigate("../contacts", {state:{id:1, role:role}});
   };
 
   return (
