@@ -70,7 +70,7 @@ function Projects() {
     var newTechStack = techStack.split(", ");
 
     axios
-      .post("https://elicohenportfoliobackend.onrender.com/getProjects/projects", { name, newTechStack, description, link })
+      .post("https://elicohenportfoliobackend.onrender.com/projects", { name, newTechStack, description, link })
       .then((res) => {
         {
           console.log(res);
