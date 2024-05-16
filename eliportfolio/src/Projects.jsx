@@ -56,7 +56,7 @@ function Projects() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/getProjects")
+      .get("https://elicohenportfoliobackend.onrender.com/getProjects")
       .then((allProjects) => {
         setProjects(allProjects.data);
       })
@@ -68,7 +68,7 @@ function Projects() {
     var newTechStack = techStack.split(", ");
 
     axios
-      .post("http://localhost:3001/projects", { name, newTechStack, description, link })
+      .post("https://elicohenportfoliobackend.onrender.com/getProjects/projects", { name, newTechStack, description, link })
       .then((res) => {
         {
           console.log(res);
