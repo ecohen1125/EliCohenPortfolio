@@ -1,5 +1,6 @@
 import "./CSS/Project.css";
 import "./CSS/Navbar.css";
+import menu from "./assets/Logos/Menu.png";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -8,8 +9,13 @@ import axios from "axios";
 // var projectsCall = 0;
 
 function Projects() {
+  const [isVisible, setIsVisible] = useState(false);
   const location = useLocation();
   var role;
+
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
 
   document.title = "Eli Cohen's Portfolio";
 
@@ -84,6 +90,118 @@ function Projects() {
       .catch((err) => {
         console.log(err);
       });
+  }
+
+  if (screen.width < 750) {
+    return (
+      <div>
+        <nav id="ontop">
+          <img src={menu} alt="Menu Button" id="menuBtn" onClick={toggleVisibility} />
+          {isVisible && <div className="hiddenMenu">
+            <ul id="navbar">
+              <li id="name">Eli Cohen</li>
+              <Link to={{ pathname: "../home", state: { id: 1, role: role } }} className="home" id="elem">
+                Home
+              </Link>
+              <Link to={{ pathname: "../about", state: { id: 1, role: role } }} className="about" id="elem">
+                About Me
+              </Link>
+              <Link to={{ pathname: "../projects", state: { id: 1, role: role } }} className="projects" id="elem">
+                Projects
+              </Link>
+              <Link to={{ pathname: "../contacts", state: { id: 1, role: role } }} className="contact" id="elem">
+                Contact
+              </Link>
+            </ul>
+          </div>}
+        </nav>
+  
+        <h1>Personal Projects</h1>
+        <p id="subText">Click each project to see a description</p>
+        <div id="btnController">
+          <button id="projtctBtn" onClick={showProjectMenu}>
+            Add a Project
+          </button>
+        </div>
+        <div id="bigAddProject">
+          <div id="addProjectMenu">
+            <h2>Add a Project</h2>
+            <p>Fill out the form below to add a project to the list</p>
+            <form id="addProjectForm" action="submit" onSubmit={handlesubmit}>
+              <div id="addProjectForm">
+                <div id="projectNameDiv">
+                  <p id="labelText">Project Name:</p>
+                  <input
+                    type="text"
+                    id="projectName"
+                    name="projectName"
+                    required
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </div>
+                <div id="techStackDiv">
+                  <p id="labelText">Tech Stack:</p>
+                  <input
+                    type="text"
+                    id="techStack"
+                    name="techStack"
+                    required
+                    onChange={(e) => setTechStack(e.target.value)}
+                  />
+                </div>
+                {/* <div id="imageUploadDiv">
+                  <p id="labelText">Upload Pictures of the Project:</p>
+                  <input
+                    type="file"
+                    id="images"
+                    name="images"
+                    required
+                    multiple
+                    onChange={onImageChange}
+                  />
+                </div> */}
+                <div id="projectDescDiv">
+                  <p id="labelText">Project Description:</p>
+                  <textarea
+                    id="projectDesc"
+                    name="projectDesc"
+                    required
+                    onChange={(e) => setDescription(e.target.value)}></textarea>
+                </div>
+                <div id="projectLinkDiv">
+                  <p id="labelText">Project Link:</p>
+                  <input
+                    type="text"
+                    id="projectLink"
+                    name="projectLink"
+                    required
+                    onChange={(e) => setLink(e.target.value)}
+                  />
+                </div>
+                <div>
+                  <button id="submitProject">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="projectContainer">
+          {projects.map((project) => {
+            let created = false;
+            var nameElems = document.querySelectorAll("#name");
+  
+            nameElems.forEach((name) => {
+              if (name.innerHTML === project.name) {
+                created = true;
+              }
+            });
+            if (!created) {
+              CreateProject(project.name, project.newTechStack, project.description, project.link);
+            }
+          })}
+        </div>
+      </div>
+    );
   }
 
   return (

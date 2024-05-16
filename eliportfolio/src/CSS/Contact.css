@@ -51,7 +51,8 @@ a {
 
 .text {
   padding: 10px;
-  font-size: 1.0em;
+  font-size: 1em;
+  width: 100%;
 }
 
 p {
@@ -61,4 +62,46 @@ a:hover {
   background-color: var(--mainblack);
   border-radius: 10px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  #email,
+  #phone,
+  #linkedin,
+  #github {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--mainred);
+    font-size: 1.5em;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #email,
+  #phone,
+  #linkedin,
+  #github {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--mainred);
+    font-size: 1.5em;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #email,
+  #phone,
+  #linkedin,
+  #github {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--mainred);
+    font-size: 1.5em;
+    width: 100%;
+  }
 }

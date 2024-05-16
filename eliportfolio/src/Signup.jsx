@@ -72,13 +72,13 @@ function Signup() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button type="submit" className="register">
+          <button type="submit" id="register">
             Register
           </button>
         </form>
         <div>
           <p className="text">Already Have an Account</p>
-          <Link to="/login" className="login">
+          <Link to="/login" id="login">
             Login
           </Link>
         </div>

@@ -1,62 +1,107 @@
 :root {
-    --mainblack: #061735;
-    --maingrey: #07264e;
-    --mainblue: #003A6D;
-    --mainred: #CC0001;
-    --secondred: #AF0000;
-} 
+  --mainblack: #061735;
+  --maingrey: #07264e;
+  --mainblue: #003a6d;
+  --mainred: #cc0001;
+  --secondred: #af0000;
+}
 
 body {
-    background-color: var(--mainblue);
-    color: white;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    height: max-content;
+  background-color: var(--mainblue);
+  color: white;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: max-content;
 }
 
 #navbar {
-    display: flex;
-    justify-content: right;
-    background-color: var(--maingrey);
-    padding: 1em;
-    margin: 0;
-    z-index: 5;
+  display: flex;
+  justify-content: right;
+  background-color: var(--maingrey);
+  padding: 1em;
+  margin: 0;
+  z-index: 5;
 }
 
 #navbar #elem {
-    list-style-type: none;
-    margin: 0 1em;
-    text-decoration: none;
-    font-size: large;
-    font-weight: bold;
-    padding: 10px;
-    color: var(--secondred);
-
+  list-style-type: none;
+  margin: 0 1em;
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+  padding: 10px;
+  color: var(--secondred);
 }
 
 #navbar #name {
-    list-style-type: none;
-    margin: 0 1em;
-    text-decoration: none;
-    font-size: large;
-    font-weight: bold;
-    padding: 10px;
-    position: absolute;
-    left: 2%;
-    top: 16px;
+  list-style-type: none;
+  margin: 0 1em;
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+  padding: 10px;
+  position: absolute;
+  left: 2%;
+  top: 16px;
 }
 
 #navbar a {
-    color: var(--secondred);
-    text-decoration: none;
+  color: var(--secondred);
+  text-decoration: none;
 }
 
 #ontop {
-    z-index: 10;
+  z-index: 10;
 }
 
 #navbar #elem:hover {
-    background-color: var(--mainblack);
-    border-radius: 10px;
-    cursor: pointer;
+  background-color: var(--mainblack);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Responsiveness */
+
+#menuBtn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+  z-index: 300;
+}
+
+@media screen and (max-width: 800px) {
+  #center {
+    width: 90%;
+  }
+
+  #ontop {
+    width: 100%;
+  }
+
+  #navbar {
+    display: none;
+    flex-direction: column;
+    width: 250px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    display: flex;
+  }
+
+  #navbar #name {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+
+  #hiddenmenu {
+    width: 100%;
+  }
+
+  /* #elem {
+        width: fit-content;
+    } */
 }
