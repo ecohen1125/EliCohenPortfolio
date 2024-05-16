@@ -9,6 +9,8 @@ function Login() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
+  document.title = "Eli Cohen's Portfolio";
+
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.defaults.withCredentials = true;

@@ -22,12 +22,14 @@ h1 {
   padding-top: 3%;
 }
 
-#about {
+#aboutpage {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 #center {
@@ -43,9 +45,9 @@ h1 {
 }
 
 #mainpic {
-  height: 400px;
-  padding-right: 30px;
-  width: 100%;
+  width: 50%;
+  height: 50%;
+  padding: 0;
 }
 
 #school {

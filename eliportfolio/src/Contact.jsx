@@ -10,6 +10,8 @@ function Contact() {
   const location = useLocation();
   var role;
 
+  document.title = "Eli Cohen's Portfolio";
+
   try {
     role = location.state.role;
   } catch (err) {

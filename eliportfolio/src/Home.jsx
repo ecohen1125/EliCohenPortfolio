@@ -7,6 +7,8 @@ function Home() {
   const navigate = useNavigate();
   const location = useLocation();
 
+  document.title = "Eli Cohen's Portfolio";
+
   var role;
 
   try {

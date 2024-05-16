@@ -1,11 +1,13 @@
 import "./CSS/About.css";
 import "./CSS/Navbar.css";
-import convocation from "./assets/convocation.jpg";
+import gates from "./assets/EliStole.jpg";
 import { Link, useLocation } from "react-router-dom";
 
 function About() {
   const location = useLocation();
   var role;
+
+  document.title = "Eli Cohen's Portfolio";
 
   try {
     role = location.state.role;
@@ -33,25 +35,31 @@ function About() {
         </ul>
       </nav>
 
-      <div id="about">
+      <div id="aboutpage">
         <div id="center">
           <h1>About Me</h1>
           <div id="basics">
-            <img id="mainpic" src={convocation} alt="Eli at Honors Convocation" />
-            <div id="school">
+            <img id="mainpic" src={gates} alt="Eli at Sample Gates" />
+            {/* <div id="school">
               <p>Major: Computer Science</p>
               <p>Minors: Web Design, Data Science, Informatics</p>
-            </div>
+            </div> */}
           </div>
           <div id="bodytext">
             <p>
-              Hello, my name is Eli Cohen, and I am from Memphis Tennessee. I am a big sports fan with my favorites
-              being basketball and baseball. My favorite teams are the Memphis Grizzlies and the Atlanta Braves. I also
-              enjoy playing video games, hanging out with friends, and watching movies and TV shows. I have a passion
-              for programming and web design. I am always looking for new projects to work on. I am a hard worker
-              willing to learn and improve my skills. I am always looking for new opportunities to grow and better
-              myself. I am a critical thinker who enjoys solving problems. They feel like a puzzle that I have to solve.
+              Hello, my name is Eli Cohen. I graduated from Indiana University with a Bachelor of Science in Computer
+              Science with minors in Web Design, Data Science, and Informatics.
             </p>
+            <br />
+            <p>
+              I am from Memphis Tennessee. I am a big sports fan with my favorites being basketball and baseball.
+              My favorite teams are the Memphis Grizzlies and the Atlanta Braves. I also enjoy playing video games,
+              hanging out with friends, and watching movies and TV shows. I have a passion for programming and web
+              design. I am always looking for new projects to work on. I am a hard worker willing to learn and improve
+              my skills. I am always looking for new opportunities to grow and better myself. I am a critical thinker
+              who enjoys solving problems. They feel like a puzzle that I have to solve.
+            </p>
+            <br />
             <p>
               Feel free to reach out and connect! Whether you have a question, a project idea, or just want to talk, I
               am always willing to chat! Do not hesitate to reach out, and I will do my best to get back to you as soon
