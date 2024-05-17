@@ -408,6 +408,8 @@ function CreateProject(name, techStack, description, link) {
   descriptionInner.appendChild(descriptionP);
 
   var projectLink = document.createElement("a");
+  projectLink.target = "_blank";
+  projectLink.rel = "noopener noreferrer";
   projectLink.href = link;
   projectLink.id = "projectLink";
   projectLink.innerText = "Link to the Project";
