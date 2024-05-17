@@ -1,9 +1,9 @@
 import "./CSS/About.css";
 import "./CSS/Navbar.css";
 import { useState } from "react";
-import gates from "./assets/EliStole.jpg";
+import gates from "/EliStole.jpg";
 import { Link, useLocation } from "react-router-dom";
-import menu from "./assets/Logos/Menu.png";
+import menu from "/Logos/Menu.png";
 
 function About() {
   const [isVisible, setIsVisible] = useState(false);

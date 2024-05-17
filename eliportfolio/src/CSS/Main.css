@@ -43,7 +43,7 @@ h1 {
 
 #left {
   vertical-align: middle;
-  background: url("../assets/EliBenchCopy.jpg") no-repeat 0 0;
+  background: url("/EliBenchCopy.jpg") no-repeat 0 0;
   background-size: cover;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
@@ -53,7 +53,7 @@ h1 {
 }
 
 .left {
-  background: url("../assets/EliBenchCopy.jpg") no-repeat 0 0;
+  background: url("/EliBenchCopy.jpg") no-repeat 0 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

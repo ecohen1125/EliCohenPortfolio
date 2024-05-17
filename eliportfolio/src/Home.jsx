@@ -1,6 +1,5 @@
 import "./CSS/Main.css";
 import "./CSS/Normalize.css";
-// import eligown from "./assets/EliGown.jpg";
 import { useNavigate, useLocation } from "react-router-dom";
 
 function Home() {

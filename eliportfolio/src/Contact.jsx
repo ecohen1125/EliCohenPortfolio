@@ -1,11 +1,11 @@
 import "./CSS/Contact.css";
 import "./CSS/Navbar.css";
-import gmail from "./assets/Logos/Gmail.png";
-import phone from "./assets/Logos/Phone.png";
-import linkedin from "./assets/Logos/LinkedIn.png";
+import gmail from "/Logos/Gmail.png";
+import phone from "/Logos/Phone.png";
+import linkedin from "/Logos/LinkedIn.png";
 import { Link, useLocation } from "react-router-dom";
-import github from "./assets/Logos/GitHub.png";
-import menu from "./assets/Logos/Menu.png";
+import github from "/Logos/GitHub.png";
+import menu from "/Logos/Menu.png";
 import { useState } from "react";
 
 function Contact() {
